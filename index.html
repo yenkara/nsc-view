@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="container">
+    <div id="keyword">
+    </div>
+    <div id="section">
+      <div id="itemList">
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    &copy; 2021. YSH. All rights reserved.
+  </div>
+
+  <div id="blackPage"></div>
+  <button id="detailCloseBtn" class="btn-close btn-close-white"></button>
+  <div id="itemDetail">
+    <div id="detailData1"></div>
+    <div class="chartView">
+      <canvas id="itemRankChart"></canvas>
+    </div>
+    <input type="hidden" id='chartData'>
+    <div id="detailData2"></div>
+  </div>
+  <div id="keywordSetting">
+    <input type="hidden" id="keywordData">
+    <div class="keywordList">
+      <div class="keyword">키워드</div>
+    </div>
+  </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/chartjs.min.js"></script>
+<script src="js/index.js"></script>

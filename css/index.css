@@ -1,0 +1,96 @@
+body { margin: 0; padding: 0; background-color: #444; color: #ccc; }
+a { text-decoration: none; color: #ccc; }
+a:hover { color: #aaa; }
+.clear {  clear: both; }
+
+.container { margin: 0 auto; padding: 0; max-width: 1200px; width: 100%; }
+
+#section { background-color: #222; width: 100vw; height: 100vh; margin: 0 auto; padding-bottom: 45px; z-index: 0; overflow: hidden; }
+#footer { position: absolute; bottom: 0; margin: 0 auto; background-color: dodgerblue; width: 100vw; height: 40px; line-height: 40px; text-align: center; z-index: 1; }
+
+#blackPage { background-color: #111A; display: none; width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 3; }
+#detailCloseBtn { position: absolute; top: 5%; right: 5%; padding: 20px; z-index:5; display: none;}
+
+/* Keyword */
+#keyword { display: none; position: absolute; background-color: #333; float: right; right: 0; width: 80vw; height: 100vh; padding-bottom: 45px; z-index: 1; overflow: auto; }
+#keyword::-webkit-scrollbar { width: 5px; }
+#keyword::-webkit-scrollbar-thumb { height: 17%; background-color: #666; }
+#keyword::-webkit-scrollbar-track { background-color: #111; }
+
+#keyword p { margin: 0; padding: 10px; user-select: none; }
+#keyword p.setting{ background-color: dodgerblue; }
+#keyword p.setting:hover{ background-color: rgb(56, 120, 184); }
+#keyword p:hover { cursor: pointer; background-color: #444; }
+#keyword p.select { cursor: auto; background-color: rgb(56, 120, 184); }
+
+#keywordSetting { background-color: #666; position: absolute; left: 5%; top: 5%; width: 90%; height: 90%; border: 2px solid #000; display: none; overflow-y: auto; overflow-x: hidden; z-index:4;}
+#keywordSetting::-webkit-scrollbar { width: 5px;}
+#keywordSetting::-webkit-scrollbar-thumb { height: 17%; background-color: #666; }
+#keywordSetting::-webkit-scrollbar-track { background-color: #111; }
+
+/* item */
+#itemList { margin: 0 auto; padding: 10px; height: 100%; overflow: auto; user-select: none; }
+#itemList::-webkit-scrollbar { width: 5px; }
+#itemList::-webkit-scrollbar-thumb { height: 17%; background-color: #666; }
+#itemList::-webkit-scrollbar-track { background-color: #111; }
+
+#itemList .item { margin: 0; padding: 5px; }
+#itemList .item:hover { margin: 0; padding: 5px; background-color: #333; }
+#itemList .item:nth-child(n+1) { border-top: #ccc 1px solid; }
+#itemList .item:first-child { border-top: none; }
+
+#itemList .item .img { width: 100%; float: left; }
+#itemList .item .info { width: 100%; float: left; }
+#itemList .item .info2 { width: 100%; float: left;}
+#itemList .item .info2 .mall { color: #bbc }
+
+
+/* Detail Page */
+#itemDetail { background-color: #666; position: absolute; left: 5%; top: 5%; width: 90%; height: 90%; border: 2px solid #000; display: none; overflow-y: auto; overflow-x: hidden; z-index:4;}
+#itemDetail::-webkit-scrollbar { width: 5px;}
+#itemDetail::-webkit-scrollbar-thumb { height: 17%; background-color: #666; }
+#itemDetail::-webkit-scrollbar-track { background-color: #111; }
+
+.chartView { height: 250px; padding: 0 25px;}
+
+#detailData1, #detailData2 { padding: 25px; width: 100%;}
+#detailData1 .img { width: 100%; }
+#detailData1 .info1 div label { font-weight: bold; color: #70abe6; display: block; }
+
+#detailData1 .link { text-align: center; }
+#detailData1 .link a { display: inline-block; background-color: #1e90ff; padding: 3px 7px; border-radius: 8px; margin-top: 10px; }
+
+
+/* 반응형 */
+@media (min-width: 600px) { 
+  #itemList .item .img { width: 80px; height: 80px;}
+  #itemList .item .info { width: 63%; padding-left: 10px; }
+  #itemList .item .info2 { padding-left: 10px; width: auto; overflow: hidden; float: right; min-width: 100px; text-align: right;}
+
+  .chartView { height: 250px; padding: 50px;}
+  #detailData1 .img { width: 200px; height: 200px; float: left; }
+  #detailData1 .info1 { margin-left: 210px; }
+  #detailData1 .info1 div label { display: inline-block; width: 120px;}
+  #detailData1 .link { text-align: center; }
+
+  #detailData1 .link a { margin-top: 0; margin-bottom: 10px; }
+}
+
+@media (min-width: 710px) { 
+  #section { float: left; width: 80%; }
+  #keyword { position: relative; width: 20%; display: block;}
+
+  #itemList .item .info { width: 60%; padding-left: 10px; }
+  #detailData1 .link a { margin-left: 10px; }
+}
+
+@media (min-width: 800px) { 
+  #itemList .item .info { width: 65%; padding-left: 10px; }
+  #detailData1 .link a { margin-left: 20px; }
+}
+
+@media (min-width: 920px) { 
+  #itemList .item .info { width: 70%; padding-left: 10px; }
+}
+
+
